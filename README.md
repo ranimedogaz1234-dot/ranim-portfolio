@@ -31,7 +31,7 @@ The site presents who I am, the technologies I work with, my projects and my exp
 | [CarRent2 / Sayara](https://github.com/ranimedogaz1234-dot/Sayara) | Luxury car rental platform with booking and an admin dashboard | Symfony, PHP, Bootstrap, GitHub Actions |
 | [Tech Store](https://github.com/ranimedogaz1234-dot/tech-store) | PHP and MySQL storefront with Cash on Delivery checkout | PHP, MySQL, JavaScript, HTML, CSS |
 | [Medicare Hospital Management](https://github.com/ranimedogaz1234-dot/medicare-hospital-manager) | JavaFX desktop app for patients, appointments and medical records | Java, JavaFX, MySQL |
-| FinGuard AI | Financial-controls platform in development: explainable invoice verification and supplier risk scoring | C#, .NET 8, xUnit, GitHub Actions |
+| [FinGuard AI](https://github.com/ranimedogaz1234-dot/finguard-ai) | Full-stack financial-security platform: explainable invoice checks, supplier risk scoring and fraud alerts | C#, ASP.NET Core 10, React, TypeScript, EF Core, SQLite, xUnit, Vitest, Playwright, GitHub Actions |
 
 Screenshots come from each project's repository or from running the real application with demo or synthetic data.
 
