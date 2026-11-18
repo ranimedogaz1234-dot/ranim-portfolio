@@ -294,7 +294,8 @@ function CenterCard({ project, locale, t }: { project: Project; locale: Locale; 
   const stack = stackOf(project);
   return (
     <article aria-roledescription="slide" aria-label={project.title}>
-      {project.featured && (
+      {/* over a placeholder the badge floats in the corner; over a real screenshot it moves next to the title */}
+      {project.featured && !project.cover && (
         <span className="pcard__featured chip">
           <Icon name="star" size={13} /> {t('featured')}
         </span>
@@ -307,6 +308,11 @@ function CenterCard({ project, locale, t }: { project: Project; locale: Locale; 
           {project.title}
         </Link>
         <Icon name="arrowUpRight" size={22} />
+        {project.featured && project.cover && (
+          <span className="pcard__featured pcard__featured--inline chip">
+            <Icon name="star" size={13} /> {t('featured')}
+          </span>
+        )}
       </h3>
       {SHOW_UNVERIFIED && !project.reviewed && <span className="verify-badge mb-2 ml-0">⚑ {t('notReviewed')}</span>}
       <p className="pcard__desc">{project.tagline[locale]}</p>

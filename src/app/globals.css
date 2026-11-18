@@ -2188,6 +2188,15 @@ body {
   left: clamp(1.5rem, 2vw, 2.7rem);
   z-index: 2;
 }
+/* featured project with a real screenshot: the badge sits beside the title, never over the screenshot */
+.pcard__featured.pcard__featured--inline {
+  position: static;
+  flex: none;
+  margin-left: 0.15rem;
+  font-size: clamp(0.72rem, 0.5vw + 0.4rem, 0.95rem);
+  font-weight: 500;
+  letter-spacing: 0;
+}
 .pcard__title {
   display: flex;
   align-items: center;
