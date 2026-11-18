@@ -136,6 +136,20 @@ export const skills: Skill[] = [
   s('ai', 'Artificial Intelligence', 'Ai', 'other', undefined, { en: 'Systems that reason, predict and assist.', fr: 'Des systèmes qui raisonnent, prédisent et assistent.' }),
 ];
 
+/**
+ * Technologies used inside a project (verified in that project's source) that are not part of
+ * Ranim's Skills section. They only appear as technology badges on project cards and case studies,
+ * so the Skills grid and its counts stay exactly as she listed them.
+ */
+const PROJECT_TECH = 'Verified in the project source (finguard-ai, Nov 2026).';
+const projectOnlyTech: Skill[] = [
+  { ...s('aspnetcore', 'ASP.NET Core 10', 'As', 'backend', 'dotnetcore/dotnetcore-original', { en: 'Microsoft’s framework for web APIs in C#.', fr: 'Framework de Microsoft pour les API web en C#.' }), source: PROJECT_TECH },
+  { ...s('efcore', 'Entity Framework Core', 'Ef', 'databases', undefined, { en: 'Object-relational mapper for .NET.', fr: 'Mappage objet-relationnel pour .NET.' }), source: PROJECT_TECH },
+  { ...s('sqlite', 'SQLite', 'Sl', 'databases', 'sqlite/sqlite-original', { en: 'Embedded, file-based SQL database.', fr: 'Base de données SQL embarquée, dans un fichier.' }), source: PROJECT_TECH },
+  { ...s('vitest', 'Vitest', 'Vt', 'tools', 'vitest/vitest-original', { en: 'Unit-testing framework for Vite projects.', fr: 'Framework de tests unitaires pour les projets Vite.' }), source: PROJECT_TECH },
+  { ...s('playwright', 'Playwright', 'Pw', 'tools', 'playwright/playwright-original', { en: 'End-to-end browser testing.', fr: 'Tests de bout en bout dans le navigateur.' }), source: PROJECT_TECH },
+];
+
 export function skillById(id: string): Skill | undefined {
-  return skills.find((skill) => skill.id === id);
+  return skills.find((skill) => skill.id === id) ?? projectOnlyTech.find((skill) => skill.id === id);
 }
