@@ -391,43 +391,63 @@ const projectList: Project[] = [
   {
     slug: 'finguard-ai',
     title: 'FinGuard AI',
-    // Verified against the project source (domain library + tests + CI). API, UI, database and the
-    // AI assistant are planned, not built yet. Listed under AI at Ranim's request (Nov 2026); no "web" category until a UI exists.
-    categories: ['security', 'data', 'ai'],
+    // Verified against the FinGuard AI source (README, domain rules, API services, tests, CI) and its
+    // docs/screenshots, Nov 2026. Detection is rule-based; the assistant uses an external model only when
+    // one is configured on the server, otherwise a labelled local demonstration mode.
+    categories: ['security', 'web', 'data', 'ai'],
+    featured: true,
     tagline: {
-      en: 'Financial-controls platform in development: explainable invoice verification and supplier risk scoring.',
-      fr: 'Plateforme de contrôle financier en développement : vérification explicable des factures et évaluation du risque fournisseur.',
+      en: 'Full-stack financial-security platform: explainable invoice checks, supplier risk scoring and fraud alerts.',
+      fr: 'Plateforme full-stack de sécurité financière : contrôle explicable des factures, risque fournisseur et alertes de fraude.',
     },
-    stack: ['csharp', 'dotnet', 'xunit', 'github-actions'],
-    repoUrl: null,
+    stack: ['csharp', 'aspnetcore', 'react', 'typescript', 'efcore', 'sqlite', 'rest', 'xunit', 'vitest', 'playwright', 'github-actions'],
+    repoUrl: `${GITHUB}/finguard-ai`,
     demoUrl: null,
-    cover: null,
-    gallery: [],
+    cover: shot('finguard-ai', 'dashboard', 1440, 900, 'Financial overview: KPIs, 12-month invoice trend and supplier risk distribution (fictional data)', 'Vue financière : indicateurs, tendance des factures sur 12 mois et répartition du risque fournisseur (données fictives)'),
+    gallery: [
+      shot('finguard-ai', 'supplier-risk', 1440, 900, 'Supplier risk assessment: 0–100 score with the points of each factor', 'Évaluation du risque fournisseur : score de 0 à 100 avec les points de chaque facteur'),
+      shot('finguard-ai', 'invoice-verification', 1440, 900, 'Invoice verification: rule findings, severity and recommended decision', 'Vérification de facture : constats des règles, gravité et décision recommandée'),
+      shot('finguard-ai', 'fraud-alert', 1440, 900, 'Fraud alert under investigation: evidence, assignment and timeline', 'Alerte de fraude en cours d’investigation : preuves, attribution et chronologie'),
+      shot('finguard-ai', 'dashboard-light', 1440, 900, 'Financial overview in the light theme', 'Vue financière en thème clair'),
+      shot('finguard-ai', 'dashboard-mobile', 780, 1587, 'Financial overview on a phone', 'Vue financière sur téléphone', 'mobile'),
+    ],
     caseStudy: {
       overview: {
-        en: 'FinGuard AI is a financial-security and fraud-prevention project. Its first module checks supplier invoices against purchase orders and past invoices, and scores supplier risk — every decision comes with the reasons behind it. All data is fictional; no real payments or card credentials are involved.',
-        fr: 'FinGuard AI est un projet de sécurité financière et de prévention de la fraude. Son premier module contrôle les factures fournisseurs par rapport aux bons de commande et aux factures passées, et évalue le risque fournisseur — chaque décision est accompagnée de ses raisons. Toutes les données sont fictives ; aucun paiement réel ni donnée de carte.',
+        en: 'FinGuard AI is a full-stack financial-security and risk platform for accounts payable. It verifies supplier invoices with explainable rules, scores supplier risk, raises fraud alerts that analysts investigate, and presents financial analytics — with role-based access control and an audit trail, so people stay in charge of every decision. It is a portfolio project: all data is fictional and no money ever moves (“Mark paid” records a simulated payment).',
+        fr: 'FinGuard AI est une plateforme full-stack de sécurité financière et de gestion des risques pour la comptabilité fournisseurs. Elle vérifie les factures avec des règles explicables, évalue le risque des fournisseurs, déclenche des alertes de fraude que les analystes instruisent et présente des analyses financières — avec un contrôle d’accès par rôles et un journal d’audit, pour que chaque décision reste humaine. C’est un projet de portfolio : toutes les données sont fictives et aucun argent ne circule (« Marquer payé » enregistre un paiement simulé).',
       },
       features: [
-        { en: 'Duplicate-invoice detection (same number, or same amount and date)', fr: 'Détection des factures en double (même numéro, ou même montant et même date)' },
-        { en: 'Arithmetic check of line items against the declared total', fr: 'Contrôle arithmétique des lignes par rapport au total déclaré' },
-        { en: 'Purchase-order matching: supplier, currency, unordered items, price increases, totals above the order', fr: 'Rapprochement avec le bon de commande : fournisseur, devise, articles non commandés, hausses de prix, totaux supérieurs à la commande' },
-        { en: 'Decision per invoice (auto-approve, manual review, reject) with explained discrepancies and severity', fr: 'Décision par facture (approbation, revue manuelle, rejet) avec écarts expliqués et niveau de gravité' },
-        { en: 'Supplier risk score from 0 to 100 with the contribution of each factor and a recommendation', fr: 'Score de risque fournisseur de 0 à 100 avec la contribution de chaque facteur et une recommandation' },
+        { en: 'Financial overview computed server-side: KPIs, 12-month invoice trend, risk distribution, alert severity and investigation priorities', fr: 'Vue financière calculée côté serveur : indicateurs, tendance des factures sur 12 mois, répartition du risque, gravité des alertes et priorités d’investigation' },
+        { en: 'Supplier risk intelligence: 0–100 scores from documented factors, each showing its points, plus risk history, a bank-detail change log and side-by-side comparison', fr: 'Risque fournisseur : scores de 0 à 100 issus de facteurs documentés, chacun avec ses points, historique du risque, journal des changements bancaires et comparaison côte à côte' },
+        { en: 'Invoice verification: line items, validated PDF upload with field extraction, rules for duplicates, arithmetic, purchase-order, price, quantity and currency checks, and a downloadable report', fr: 'Vérification des factures : lignes, import PDF validé avec extraction des champs, règles sur les doublons, l’arithmétique, le bon de commande, les prix, les quantités et la devise, et rapport téléchargeable' },
+        { en: 'Rule-based fraud detection — payment-detail mismatch, recent bank change, amount outliers, split invoicing, threshold gaming — with severity, assignment, notes and an investigation timeline', fr: 'Détection de fraude à base de règles — coordonnées bancaires divergentes, changement bancaire récent, montants atypiques, fractionnement, contournement de seuil — avec gravité, attribution, notes et chronologie d’investigation' },
+        { en: 'Approval workflow with segregation of duties: you cannot approve an invoice you submitted, and only administrators can confirm fraud', fr: 'Circuit d’approbation avec séparation des tâches : impossible d’approuver sa propre facture, et seuls les administrateurs confirment une fraude' },
+        { en: 'Financial assistant that explains scores and alerts from live platform data; it calls an external model from the backend only when one is configured, otherwise it runs in a clearly labelled local demonstration mode', fr: 'Assistant financier qui explique scores et alertes à partir des données de la plateforme ; il n’appelle un modèle externe depuis le backend que s’il est configuré, sinon il fonctionne dans un mode de démonstration local clairement signalé' },
+        { en: 'Authentication with Admin and Analyst roles, lockout, rate limiting, password reset, user administration and an audit log', fr: 'Authentification avec rôles Administrateur et Analyste, verrouillage, limitation de débit, réinitialisation du mot de passe, gestion des utilisateurs et journal d’audit' },
       ],
       architecture: {
-        en: 'A framework-free C# domain library on .NET 8, so the rules stay pure and unit-testable, with xUnit tests and a GitHub Actions workflow that runs them. A future API layer will only orchestrate this logic; an optional language-model layer is planned to phrase explanations, never to make decisions.',
-        fr: 'Une bibliothèque de domaine C# sur .NET 8, sans framework, pour que les règles restent pures et testables, avec des tests xUnit et un workflow GitHub Actions qui les exécute. Une future couche API se contentera d’orchestrer cette logique ; une couche optionnelle de modèle de langage est prévue pour formuler les explications, jamais pour décider.',
+        en: 'A React 19 + TypeScript single-page app (Vite, React Router, TanStack Query, Recharts) talks to an ASP.NET Core 10 REST API in C#. Controllers stay thin; services enforce permissions on the server and write the audit log; Entity Framework Core 10 stores data in SQLite with migrations, keeping money as integer cents. All detection and scoring rules live in a framework-free domain library, so they are unit-tested in isolation. Security includes cookie sessions with antiforgery tokens, SameSite=Strict, PBKDF2 hashing, strict security headers and signature-checked PDF uploads. Tests cover the domain (xUnit), the real API through WebApplicationFactory, React components (Vitest) and end-to-end journeys on desktop and mobile (Playwright), all run by GitHub Actions.',
+        fr: 'Une application monopage React 19 + TypeScript (Vite, React Router, TanStack Query, Recharts) communique avec une API REST ASP.NET Core 10 en C#. Les contrôleurs restent minces ; les services appliquent les permissions côté serveur et alimentent le journal d’audit ; Entity Framework Core 10 stocke les données dans SQLite avec migrations, les montants étant conservés en centimes entiers. Toutes les règles de détection et de notation vivent dans une bibliothèque de domaine sans framework, testée isolément. La sécurité comprend des sessions par cookie avec jetons anti-falsification, SameSite=Strict, le hachage PBKDF2, des en-têtes de sécurité stricts et des PDF importés vérifiés par signature. Les tests couvrent le domaine (xUnit), l’API réelle via WebApplicationFactory, les composants React (Vitest) et des parcours de bout en bout sur ordinateur et mobile (Playwright), le tout exécuté par GitHub Actions.',
       },
+      challenges: [
+        { en: 'A finance team cannot act on a flag it does not understand.', fr: 'Une équipe financière ne peut pas agir sur une alerte qu’elle ne comprend pas.' },
+        { en: 'Fraud controls are weak if the same person can create and approve a payment.', fr: 'Les contrôles anti-fraude sont fragiles si la même personne peut créer et approuver un paiement.' },
+        { en: 'Adding an AI assistant without exposing API keys or letting it invent figures.', fr: 'Ajouter un assistant IA sans exposer de clés d’API ni le laisser inventer des chiffres.' },
+      ],
+      solutions: [
+        { en: 'Every rule returns a code, a severity, a plain-language explanation and its evidence, and each risk score is the visible sum of documented factors.', fr: 'Chaque règle renvoie un code, une gravité, une explication claire et ses preuves, et chaque score de risque est la somme visible de facteurs documentés.' },
+        { en: 'Segregation of duties and admin-only fraud confirmation are enforced by the API, not just hidden in the UI, and sensitive actions are written to an audit log.', fr: 'La séparation des tâches et la confirmation de fraude réservée aux administrateurs sont appliquées par l’API, pas seulement masquées dans l’interface, et les actions sensibles sont inscrites au journal d’audit.' },
+        { en: 'The assistant is grounded in live platform data and calls a model only from the backend; without a key it answers in a labelled local mode built from the same rules.', fr: 'L’assistant s’appuie sur les données réelles de la plateforme et n’appelle un modèle que depuis le backend ; sans clé, il répond dans un mode local signalé, construit à partir des mêmes règles.' },
+      ],
       status: {
-        en: 'In development. Built so far: the invoice-verification rule engine, the supplier risk scorer, six unit tests and the CI workflow. Planned: ASP.NET Core API with authentication and role-based access, EF Core with SQL Server, a React interface, a simulated expense-card module and the AI explanation assistant.',
-        fr: 'En développement. Réalisé à ce stade : le moteur de règles de vérification des factures, l’évaluation du risque fournisseur, six tests unitaires et le workflow CI. Prévu : API ASP.NET Core avec authentification et contrôle d’accès par rôles, EF Core avec SQL Server, une interface React, un module simulé de cartes de dépenses et l’assistant d’explication par IA.',
+        en: 'Working portfolio application with fictional data. Documented limitations: detection is rule-based (no machine-learning model yet), PDF extraction needs text-based PDFs, payments are simulated, and there is no multi-factor authentication or email delivery yet. Planned: MFA, OCR, configurable thresholds and an anomaly-detection model to complement the rules.',
+        fr: 'Application de portfolio fonctionnelle avec des données fictives. Limites documentées : détection à base de règles (pas encore de modèle d’apprentissage automatique), extraction réservée aux PDF textuels, paiements simulés, pas encore d’authentification multifacteur ni d’envoi d’e-mails. Prévu : MFA, OCR, seuils configurables et un modèle de détection d’anomalies en complément des règles.',
       },
     },
     reviewed: true,
     theme: theme({
-      identityNote: 'Fintech security: deep navy with emerald signals.',
-      colors: { bg: '#0a1020', surface: '#111a2e', text: '#e8eefc', muted: '#8b97b3', accent: '#22c55e', accentContrast: '#05140b', line: '#1f2a44' },
+      identityNote: 'From the real app: deep navy canvas, glass panels, electric-blue actions.',
+      colors: { bg: '#070b18', surface: '#0e1428', text: '#e8ecf8', muted: '#8a93b0', accent: '#3b82f6', accentContrast: '#ffffff', line: '#1c2440' },
       font: 'grotesk',
       radius: '12px',
       variant: 'fintech',
