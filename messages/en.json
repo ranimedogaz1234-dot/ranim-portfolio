@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Ranim Doggaz — Full-Stack Developer",
+    "description": "Portfolio of Ranim Doggaz, full-stack developer and final-year GLSI student building modern, secure and intelligent web experiences.",
+    "caseStudyTitle": "{project} — Case study · Ranim Doggaz"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "chooseLanguage": "Choose language",
+    "theme": "Colour theme",
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme",
+    "pauseMotion": "Pause ambient animations",
+    "playMotion": "Play ambient animations",
+    "prevProject": "Previous project",
+    "nextProject": "Next project",
+    "goToProject": "Go to project {n}",
+    "newTab": "(opens in a new tab)",
+    "needsVerification": "Needs verification — hidden in production",
+    "butterfly": "Glass butterfly illustration",
+    "home": "Ranim — home"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Developer / Creator / Problem Solver",
+    "explore": "Explore My Work",
+    "about": "About Me",
+    "downloadCv": "Download CV",
+    "statProjects": "Projects",
+    "statTech": "Technologies",
+    "statInternship": "{count, plural, one {Internship} other {Internships}}",
+    "effect": {
+      "kicker": "The Butterfly Effect",
+      "quote": "A butterfly flaps its wings. Somewhere, everything changes.",
+      "body": "I believe even the smallest line of code can set something extraordinary in motion."
+    }
+  },
+  "about": {
+    "index": "01 / About",
+    "title": "About Me",
+    "body": "Final-year IT student pursuing a Bachelor’s degree in Software Engineering and Information Systems (GLSI), with a strong foundation in programming, full-stack development and databases — and hands-on experience building web applications with modern frameworks, REST APIs and software development tools.",
+    "educationLabel": "Education",
+    "interestsLabel": "Focus areas",
+    "experienceLabel": "Experience",
+    "cardLabel": "Developer ID card",
+    "flipHint": "Hover, tap or press Enter to flip",
+    "front": "Front",
+    "back": "Back",
+    "idTitle": "Developer ID",
+    "cvSoon": "CV available soon",
+    "status": "Status",
+    "statusValue": "Final-year student",
+    "photoPending": "Portrait coming soon",
+    "photoAlt": "Portrait of Ranim Doggaz",
+    "certificationsLabel": "Certifications",
+    "languagesLabel": "Languages",
+    "strengthsLabel": "Personal skills",
+    "greeting": "Hello! I’m Ranim",
+    "journey": "My Journey"
+  },
+  "skills": {
+    "index": "02 / Skills",
+    "title": "My Skills",
+    "intro": "Technologies I have studied, used or worked with in my projects — a map of my toolkit, not a ranking of expertise.",
+    "filterLabel": "Filter technologies by category",
+    "all": "All",
+    "categories": {
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "auth": "Auth & Cloud",
+      "tools": "Tools",
+      "design": "UI/UX",
+      "security": "Security & Networking",
+      "other": "Other"
+    },
+    "detailEmpty": "Hover, focus or select a technology to inspect it.",
+    "count": "{count, plural, one {# technology} other {# technologies}}",
+    "number": "No.",
+    "symbol": "Symbol",
+    "category": "Family",
+    "categoriesShort": {
+      "security": "Security · Net"
+    },
+    "viewMore": "View More",
+    "viewLess": "View Less"
+  },
+  "projects": {
+    "index": "03 / Projects",
+    "title": "My Projects",
+    "intro": "A selection of real projects that reflect my skills, curiosity and passion for building meaningful solutions.",
+    "filterLabel": "Filter projects by category",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "desktop": "Desktop",
+      "data": "Data / BI",
+      "security": "Security",
+      "ai": "AI"
+    },
+    "featured": "Featured",
+    "viewProject": "View Project",
+    "github": "View source on GitHub",
+    "screenshotSoon": "Screenshot coming soon",
+    "stackSoon": "Stack to be confirmed",
+    "empty": "No project in this category yet.",
+    "carouselLabel": "Projects carousel",
+    "slideOf": "Project {current} of {total}",
+    "notReviewed": "Draft — check against the repository"
+  },
+  "experience": {
+    "index": "04 / Experience",
+    "title": "Experience & Education",
+    "kinds": {
+      "internship": "Internship",
+      "education": "Education",
+      "diploma": "Diploma"
+    },
+    "empty": "Details will be added from my CV.",
+    "highlights": "Highlights"
+  },
+  "contact": {
+    "index": "05 / Contact",
+    "title": "Get in Touch",
+    "subtitle": "Let’s build something meaningful together.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "cv": "CV"
+    },
+    "linksSoon": "Contact links will be published soon.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send Message",
+      "required": "This field is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageShort": "Please write at least 10 characters.",
+      "notConfigured": "The contact address isn’t published yet — the form will work as soon as it is.",
+      "opening": "Opening your email app…"
+    },
+    "location": "Based in",
+    "thanks": "Thank you for visiting!"
+  },
+  "caseStudy": {
+    "back": "Back to Projects",
+    "category": "Category",
+    "alias": "Also known as {name}",
+    "sections": {
+      "overview": "Project overview",
+      "technologies": "Technologies",
+      "features": "Main features",
+      "screens": "Screenshots",
+      "implementation": "Technical implementation",
+      "challenges": "Challenges & solutions",
+      "challengesLabel": "Challenge",
+      "solutionsLabel": "Solution",
+      "repository": "Source code",
+      "status": "Development status"
+    },
+    "pending": "Pending",
+    "pendingText": "This part will be written from the real project once its details are confirmed.",
+    "pendingScreens": "Real screenshots of the application will appear here.",
+    "pendingStack": "Technologies to be confirmed.",
+    "repo": "View the GitHub repository",
+    "repoPending": "The repository link will be added soon.",
+    "demo": "Live demo",
+    "draftNote": "Draft case study — content still to be checked against the repository.",
+    "identityNote": "Provisional visual identity",
+    "enlarge": "View larger: {alt}",
+    "close": "Close",
+    "desktop": "Desktop",
+    "desktopApp": "Desktop application",
+    "mobile": "Mobile",
+    "next": "Next project",
+    "previous": "Previous project",
+    "notFound": "This project doesn’t exist."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you’re looking for has flown away.",
+    "home": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "An unexpected error occurred. Please try again.",
+    "retry": "Try again"
+  },
+  "footer": {
+    "rights": "© {year} Ranim Doggaz. All rights reserved."
+  }
+}

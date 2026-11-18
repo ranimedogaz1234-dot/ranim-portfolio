@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Ranim Doggaz — Développeuse Full-Stack",
+    "description": "Portfolio de Ranim Doggaz, développeuse full-stack et étudiante en dernière année de GLSI, qui conçoit des expériences web modernes, sécurisées et intelligentes.",
+    "caseStudyTitle": "{project} — Étude de cas · Ranim Doggaz"
+  },
+  "a11y": {
+    "skipToContent": "Aller au contenu",
+    "mainNav": "Navigation principale",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "chooseLanguage": "Choisir la langue",
+    "theme": "Thème de couleurs",
+    "toLight": "Passer au thème clair",
+    "toDark": "Passer au thème sombre",
+    "pauseMotion": "Mettre en pause les animations d’ambiance",
+    "playMotion": "Lancer les animations d’ambiance",
+    "prevProject": "Projet précédent",
+    "nextProject": "Projet suivant",
+    "goToProject": "Aller au projet {n}",
+    "newTab": "(s’ouvre dans un nouvel onglet)",
+    "needsVerification": "À vérifier — masqué en production",
+    "butterfly": "Illustration d’un papillon de verre",
+    "home": "Ranim — accueil"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Parcours",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Développeuse / Créatrice / Résolution de problèmes",
+    "explore": "Découvrir mon travail",
+    "about": "À propos de moi",
+    "downloadCv": "Télécharger le CV",
+    "statProjects": "Projets",
+    "statTech": "Technologies",
+    "statInternship": "{count, plural, one {Stage} other {Stages}}",
+    "effect": {
+      "kicker": "L’effet papillon",
+      "quote": "Une aile de papillon bat. Ailleurs, tout change.",
+      "body": "Je crois que même la plus petite ligne de code peut donner naissance à quelque chose d’extraordinaire."
+    }
+  },
+  "about": {
+    "index": "01 / À propos",
+    "title": "À propos de moi",
+    "body": "Étudiante en dernière année de licence en Génie Logiciel et Systèmes d’Information (GLSI), avec de solides bases en programmation, en développement full-stack et en bases de données — et une expérience concrète du développement d’applications web avec des frameworks modernes, des API REST et des outils de développement logiciel.",
+    "educationLabel": "Formation",
+    "interestsLabel": "Domaines d’intérêt",
+    "experienceLabel": "Expérience",
+    "cardLabel": "Carte d’identité de développeuse",
+    "flipHint": "Survolez, touchez ou appuyez sur Entrée pour retourner",
+    "front": "Recto",
+    "back": "Verso",
+    "idTitle": "ID Développeuse",
+    "cvSoon": "CV bientôt disponible",
+    "status": "Statut",
+    "statusValue": "Étudiante en dernière année",
+    "photoPending": "Portrait bientôt disponible",
+    "photoAlt": "Portrait de Ranim Doggaz",
+    "certificationsLabel": "Certifications",
+    "languagesLabel": "Langues",
+    "strengthsLabel": "Compétences personnelles",
+    "greeting": "Bonjour ! Je suis Ranim",
+    "journey": "Mon parcours"
+  },
+  "skills": {
+    "index": "02 / Compétences",
+    "title": "Mes compétences",
+    "intro": "Les technologies que j’ai étudiées, utilisées ou mises en œuvre dans mes projets — une carte de mes outils, pas un classement d’expertise.",
+    "filterLabel": "Filtrer les technologies par catégorie",
+    "all": "Tout",
+    "categories": {
+      "languages": "Langages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de données",
+      "auth": "Auth & Cloud",
+      "tools": "Outils",
+      "design": "UI/UX",
+      "security": "Sécurité & réseaux",
+      "other": "Autres"
+    },
+    "detailEmpty": "Survolez, sélectionnez ou parcourez une technologie au clavier pour l’inspecter.",
+    "count": "{count, plural, one {# technologie} other {# technologies}}",
+    "number": "N°",
+    "symbol": "Symbole",
+    "category": "Famille",
+    "categoriesShort": {
+      "security": "Sécurité · Réseau"
+    },
+    "viewMore": "Voir plus",
+    "viewLess": "Voir moins"
+  },
+  "projects": {
+    "index": "03 / Projets",
+    "title": "Mes projets",
+    "intro": "Une sélection de projets réels qui reflètent mes compétences, ma curiosité et ma passion pour la création de solutions utiles.",
+    "filterLabel": "Filtrer les projets par catégorie",
+    "filters": {
+      "all": "Tout",
+      "web": "Web",
+      "mobile": "Mobile",
+      "desktop": "Bureau",
+      "data": "Data / BI",
+      "security": "Sécurité",
+      "ai": "IA"
+    },
+    "featured": "À la une",
+    "viewProject": "Voir le projet",
+    "github": "Voir le code sur GitHub",
+    "screenshotSoon": "Capture d’écran à venir",
+    "stackSoon": "Technologies à confirmer",
+    "empty": "Aucun projet dans cette catégorie pour le moment.",
+    "carouselLabel": "Carrousel de projets",
+    "slideOf": "Projet {current} sur {total}",
+    "notReviewed": "Brouillon — à vérifier avec le dépôt"
+  },
+  "experience": {
+    "index": "04 / Parcours",
+    "title": "Expérience & Formation",
+    "kinds": {
+      "internship": "Stage",
+      "education": "Formation",
+      "diploma": "Diplôme"
+    },
+    "empty": "Les détails seront ajoutés à partir de mon CV.",
+    "highlights": "Réalisations"
+  },
+  "contact": {
+    "index": "05 / Contact",
+    "title": "Me contacter",
+    "subtitle": "Construisons ensemble quelque chose qui a du sens.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "E-mail",
+      "cv": "CV"
+    },
+    "linksSoon": "Les liens de contact seront publiés prochainement.",
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre e-mail",
+      "message": "Votre message",
+      "send": "Envoyer le message",
+      "required": "Ce champ est obligatoire.",
+      "emailInvalid": "Veuillez saisir une adresse e-mail valide.",
+      "messageShort": "Veuillez écrire au moins 10 caractères.",
+      "notConfigured": "L’adresse de contact n’est pas encore publiée — le formulaire fonctionnera dès qu’elle le sera.",
+      "opening": "Ouverture de votre messagerie…"
+    },
+    "location": "Basée à",
+    "thanks": "Merci de votre visite !"
+  },
+  "caseStudy": {
+    "back": "Retour aux projets",
+    "category": "Catégorie",
+    "alias": "Également appelé {name}",
+    "sections": {
+      "overview": "Présentation du projet",
+      "technologies": "Technologies",
+      "features": "Fonctionnalités principales",
+      "screens": "Captures d’écran",
+      "implementation": "Mise en œuvre technique",
+      "challenges": "Défis et solutions",
+      "challengesLabel": "Défi",
+      "solutionsLabel": "Solution",
+      "repository": "Code source",
+      "status": "État d’avancement"
+    },
+    "pending": "En attente",
+    "pendingText": "Cette partie sera rédigée à partir du vrai projet une fois ses détails confirmés.",
+    "pendingScreens": "Les vraies captures d’écran de l’application apparaîtront ici.",
+    "pendingStack": "Technologies à confirmer.",
+    "repo": "Voir le dépôt GitHub",
+    "repoPending": "Le lien du dépôt sera ajouté prochainement.",
+    "demo": "Démo en ligne",
+    "draftNote": "Étude de cas en préparation — contenu à vérifier avec le dépôt.",
+    "identityNote": "Identité visuelle provisoire",
+    "enlarge": "Agrandir : {alt}",
+    "close": "Fermer",
+    "desktop": "Ordinateur",
+    "desktopApp": "Application de bureau",
+    "mobile": "Mobile",
+    "next": "Projet suivant",
+    "previous": "Projet précédent",
+    "notFound": "Ce projet n’existe pas."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "La page que vous cherchez s’est envolée.",
+    "home": "Retour à l’accueil"
+  },
+  "error": {
+    "title": "Une erreur est survenue",
+    "body": "Une erreur inattendue s’est produite. Veuillez réessayer.",
+    "retry": "Réessayer"
+  },
+  "footer": {
+    "rights": "© {year} Ranim Doggaz. Tous droits réservés."
+  }
+}
