@@ -4,7 +4,9 @@ Personal portfolio of **Ranim Doggaz**, full-stack developer and final-year Soft
 
 The site presents who I am, the technologies I work with, my projects and my experience. It is built around an iridescent-butterfly identity: a 3D butterfly, liquid-glass waves and glass interface panels, in both light and dark themes.
 
-### 🌐 Live Portfolio: [Visit My Website](https://ranim-portfolio-delta.vercel.app)
+### 🌐 Live Portfolio — Vercel: [ranim-portfolio-delta.vercel.app](https://ranim-portfolio-delta.vercel.app)
+
+### 🌐 Live Portfolio — GitHub Pages: [ranimedogaz1234-dot.github.io/ranim-portfolio](https://ranimedogaz1234-dot.github.io/ranim-portfolio/)
 
 ---
 
@@ -77,7 +79,16 @@ npm run build
 npm start            # serves the production build on http://localhost:3000
 ```
 
-The site uses Next.js server features (locale redirects in `src/proxy.ts` and image optimisation), so it should be deployed on a platform that runs Next.js, such as Vercel. It isn't a static export.
+### Hosting
+
+The same code is deployed to two places:
+
+| Host | Build | How it deploys |
+|---|---|---|
+| [Vercel](https://ranim-portfolio-delta.vercel.app) | `npm run build`: the regular Next.js build, with locale redirects in `src/proxy.ts` and image optimisation | Vercel's GitHub integration, on every push to `main` |
+| [GitHub Pages](https://ranimedogaz1234-dot.github.io/ranim-portfolio/) | `npm run build:pages`: a static export served under `/ranim-portfolio`, written to `out/` | `.github/workflows/pages.yml`, on every push to `main` |
+
+`npm run build:pages` (see `scripts/build-pages.mjs`) sets `GITHUB_PAGES=true`, which `next.config.ts` turns into a static export with the `/ranim-portfolio` base path and unoptimised images. Pages has no server, so the script leaves out the two server-only files while it builds and adds static replacements: an `index.html` that opens the visitor's saved language (English by default) and a `404.html`. Files from `public/` are referenced through `asset()` in `src/lib/asset.ts`, so they get the base path on Pages and stay unchanged on Vercel.
 
 ## Project structure
 

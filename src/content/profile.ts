@@ -1,4 +1,5 @@
 import type { ContactLink, L10n } from './types';
+import { asset } from '@/lib/asset';
 
 export const profile = {
   name: 'Ranim Doggaz',
@@ -61,13 +62,13 @@ export const profile = {
    * Public copy of the 16 Nov 2026 CV, which has no phone number (verified: text layer, annotations
    * and metadata contain no phone). Ranim's original file is left untouched outside the project.
    */
-  cvUrl: '/cv/ranim-doggaz-cv.pdf' as string | null,
+  cvUrl: asset('/cv/ranim-doggaz-cv.pdf') as string | null,
   /**
    * Ranim's own portrait for the About ID card. Put the photo in /public/profile/ and set e.g.
    * { src: '/profile/ranim.jpg', width: 1200, height: 1500 }. While null, a neutral portrait
    * placeholder is shown (never a generated face).
    */
-  photo: { src: '/profile/ranim-doggaz.webp', width: 1000, height: 1000 } as { src: string; width: number; height: number } | null,
+  photo: { src: asset('/profile/ranim-doggaz.webp'), width: 1000, height: 1000 } as { src: string; width: number; height: number } | null,
 };
 
 /**

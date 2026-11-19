@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "check:i18n": "node scripts/check-messages.mjs"
+    "check:i18n": "node scripts/check-messages.mjs",
+    "build:pages": "node scripts/build-pages.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "^9.5.0",

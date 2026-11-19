@@ -1,4 +1,5 @@
 import type { CaseStudyTheme, Project, ProjectScreenshot } from './types';
+import { asset } from '@/lib/asset';
 
 /**
  * HOW TO ADD A PROJECT
@@ -25,7 +26,7 @@ const shot = (
   en: string,
   fr: string,
   device: ProjectScreenshot['device'] = 'desktop',
-): ProjectScreenshot => ({ src: `/projects/${slug}/${name}.webp`, width, height, alt: { en, fr }, device });
+): ProjectScreenshot => ({ src: asset(`/projects/${slug}/${name}.webp`), width, height, alt: { en, fr }, device });
 
 const GITHUB = 'https://github.com/ranimedogaz1234-dot';
 

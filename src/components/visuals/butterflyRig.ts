@@ -6,17 +6,18 @@
  * is the inner edge of each texture. Each wing is a real separate plane that rotates in 3D
  * around that hinge — the material is the reference artwork, the articulation is live.
  */
+import { asset } from '@/lib/asset';
 export const WING_TEXTURE = {
   /** Midnight (dark theme) wings — from the dark reference render. */
-  left: '/visuals/butterfly-left.webp',
-  right: '/visuals/butterfly-right.webp',
+  left: asset('/visuals/butterfly-left.webp'),
+  right: asset('/visuals/butterfly-right.webp'),
   /** Pearl (soft theme) wings — same artwork, lifted toward white like the soft reference. */
-  pearlLeft: '/visuals/butterfly-pearl-left.webp',
-  pearlRight: '/visuals/butterfly-pearl-right.webp',
-  smallLeft: '/visuals/butterfly-small-left.webp',
-  smallRight: '/visuals/butterfly-small-right.webp',
-  smallPearlLeft: '/visuals/butterfly-small-pearl-left.webp',
-  smallPearlRight: '/visuals/butterfly-small-pearl-right.webp',
+  pearlLeft: asset('/visuals/butterfly-pearl-left.webp'),
+  pearlRight: asset('/visuals/butterfly-pearl-right.webp'),
+  smallLeft: asset('/visuals/butterfly-small-left.webp'),
+  smallRight: asset('/visuals/butterfly-small-right.webp'),
+  smallPearlLeft: asset('/visuals/butterfly-small-pearl-left.webp'),
+  smallPearlRight: asset('/visuals/butterfly-small-pearl-right.webp'),
   /** Pixel size of one wing texture. */
   width: 425,
   height: 614,

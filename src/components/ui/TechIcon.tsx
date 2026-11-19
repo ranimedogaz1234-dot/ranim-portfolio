@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { asset } from '@/lib/asset';
 import type { Skill } from '@/content/types';
 
 /**
@@ -22,7 +23,7 @@ export function TechIcon({ skill, size = 24 }: { skill: Skill; size?: number }) 
     // eslint-disable-next-line @next/next/no-img-element -- tiny local SVG logos; next/image adds nothing here
     <img
       className="tech-icon"
-      src={`/icons/${skill.icon.replace('/', '_')}.svg`}
+      src={asset(`/icons/${skill.icon.replace('/', '_')}.svg`)}
       alt=""
       width={size}
       height={size}
