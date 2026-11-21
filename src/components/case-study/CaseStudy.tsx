@@ -19,6 +19,13 @@ const fontVar: Record<Project['theme']['font'], string> = {
   rounded: 'var(--font-nunito), system-ui, sans-serif',
 };
 
+/** Whether a case-study background is dark, so one-colour logos are inverted only where they need to be. */
+function isDark(hex: string): boolean {
+  const v = hex.replace('#', '');
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(v.slice(i, i + 2), 16) / 255);
+  return 0.2126 * r! + 0.7152 * g! + 0.0722 * b! < 0.5;
+}
+
 type T = ReturnType<typeof useTranslations<'caseStudy'>>;
 
 function Pending({ t, text }: { t: T; text?: string }) {
@@ -89,7 +96,7 @@ export function CaseStudy({ project, locale }: { project: Project; locale: Local
   let n = 0;
 
   return (
-    <div className="cs" style={style} data-variant={project.theme.variant}>
+    <div className="cs" style={style} data-variant={project.theme.variant} data-scheme={isDark(colors.bg) ? 'dark' : 'light'}>
       <a href="#cs-main" className="skip-link">
         {ta('skipToContent')}
       </a>
@@ -182,6 +189,24 @@ export function CaseStudy({ project, locale }: { project: Project; locale: Local
         <Section id="implementation" n={++n} title={t('sections.implementation')}>
           {cs.architecture ? <p className="cs-lead m-0">{cs.architecture[locale]}</p> : <Pending t={t} />}
         </Section>
+
+        {cs.performance && cs.performance.length > 0 && (
+          <Section id="performance" n={++n} title={t('sections.performance')}>
+            <List items={cs.performance} locale={locale} />
+          </Section>
+        )}
+
+        {cs.testing && cs.testing.length > 0 && (
+          <Section id="testing" n={++n} title={t('sections.testing')}>
+            <List items={cs.testing} locale={locale} />
+          </Section>
+        )}
+
+        {cs.security && cs.security.length > 0 && (
+          <Section id="security" n={++n} title={t('sections.security')}>
+            <List items={cs.security} locale={locale} />
+          </Section>
+        )}
 
         {cs.status && (
           <Section id="status" n={++n} title={t('sections.status')}>
