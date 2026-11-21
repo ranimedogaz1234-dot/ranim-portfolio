@@ -28,7 +28,7 @@ The site presents who I am, the technologies I work with, my projects and my exp
 |---|---|---|
 | [MindMirror](https://github.com/ranimedogaz1234-dot/MindMirror) | Trilingual (EN / FR / AR) personality-type assessment with transparent scoring | React, TypeScript, Firebase, Tailwind CSS, Vite |
 | PetParadise | E-commerce platform for pet products (in development) | Next.js, TypeScript |
-| Sephora Business Insight | Business-intelligence platform for products and customer reviews (in development) | Next.js, FastAPI, Python |
+| [Sephora Business Insight](https://github.com/ranimedogaz1234-dot/sephora-business-insight1) | Full-stack BI platform for Sephora's catalogue and 1.09M customer reviews: seven analytics pages, from executive KPIs to AI sentiment | Next.js, React, TypeScript, Recharts, Python, FastAPI, Pandas, Parquet |
 | [Travel-TR](https://github.com/ranimedogaz1234-dot/Travel-Tr) | Full-stack travel booking app with filterable destinations and reservations | Angular, TypeScript, Node.js, Express |
 | [CarRent2 / Sayara](https://github.com/ranimedogaz1234-dot/Sayara) | Luxury car rental platform with booking and an admin dashboard | Symfony, PHP, Bootstrap, GitHub Actions |
 | [Tech Store](https://github.com/ranimedogaz1234-dot/tech-store) | PHP and MySQL storefront with Cash on Delivery checkout | PHP, MySQL, JavaScript, HTML, CSS |

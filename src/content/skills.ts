@@ -142,12 +142,17 @@ export const skills: Skill[] = [
  * so the Skills grid and its counts stay exactly as she listed them.
  */
 const PROJECT_TECH = 'Verified in the project source (finguard-ai, Nov 2026).';
+const SBI_TECH = 'Verified in the project source (sephora-business-insight1: package.json, requirements.txt, backend/app), Nov 2026.';
 const projectOnlyTech: Skill[] = [
   { ...s('aspnetcore', 'ASP.NET Core 10', 'As', 'backend', 'dotnetcore/dotnetcore-original', { en: 'Microsoft’s framework for web APIs in C#.', fr: 'Framework de Microsoft pour les API web en C#.' }), source: PROJECT_TECH },
   { ...s('efcore', 'Entity Framework Core', 'Ef', 'databases', undefined, { en: 'Object-relational mapper for .NET.', fr: 'Mappage objet-relationnel pour .NET.' }), source: PROJECT_TECH },
   { ...s('sqlite', 'SQLite', 'Sl', 'databases', 'sqlite/sqlite-original', { en: 'Embedded, file-based SQL database.', fr: 'Base de données SQL embarquée, dans un fichier.' }), source: PROJECT_TECH },
   { ...s('vitest', 'Vitest', 'Vt', 'tools', 'vitest/vitest-original', { en: 'Unit-testing framework for Vite projects.', fr: 'Framework de tests unitaires pour les projets Vite.' }), source: PROJECT_TECH },
   { ...s('playwright', 'Playwright', 'Pw', 'tools', 'playwright/playwright-original', { en: 'End-to-end browser testing.', fr: 'Tests de bout en bout dans le navigateur.' }), source: PROJECT_TECH },
+  { ...s('recharts', 'Recharts', 'Rc', 'frontend', undefined, { en: 'Composable charting library for React.', fr: 'Bibliothèque de graphiques composables pour React.' }), source: SBI_TECH },
+  { ...s('parquet', 'Apache Parquet', 'Pq', 'databases', undefined, { en: 'Columnar file format for fast analytical reads.', fr: 'Format de fichier en colonnes pour des lectures analytiques rapides.' }), source: SBI_TECH },
+  { ...s('pytest', 'pytest', 'Pt', 'tools', undefined, { en: 'Testing framework for Python.', fr: 'Framework de tests pour Python.' }), source: SBI_TECH },
+  { ...s('claude-api', 'Claude API', 'Cl', 'other', undefined, { en: 'Anthropic’s API for Claude models.', fr: 'L’API d’Anthropic pour les modèles Claude.' }), source: SBI_TECH },
 ];
 
 export function skillById(id: string): Skill | undefined {

@@ -6,6 +6,7 @@ import { Inter, Nunito, Playfair_Display, Space_Grotesk } from 'next/font/google
 import { routing, type Locale } from '@/i18n/routing';
 import { ThemeProvider, themeInitScript } from '@/components/theme/ThemeProvider';
 import { MotionPrefsProvider } from '@/components/theme/MotionPrefs';
+import { asset } from '@/lib/asset';
 import '../globals.css';
 import '../mobile.css';
 
@@ -24,14 +25,26 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+/**
+ * Absolute origin for Open Graph images and alternate links: GitHub Pages for the static build,
+ * the Vercel production domain on Vercel, localhost in development.
+ */
+const siteOrigin =
+  process.env.GITHUB_PAGES === 'true'
+    ? 'https://ranimedogaz1234-dot.github.io'
+    : process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : 'http://localhost:3000';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale: locale as Locale, namespace: 'meta' });
   return {
+    metadataBase: new URL(siteOrigin),
     title: t('title'),
     description: t('description'),
-    alternates: { languages: { en: '/en', fr: '/fr' } },
+    alternates: { languages: { en: asset('/en'), fr: asset('/fr') } },
     openGraph: { title: t('title'), description: t('description'), locale: locale === 'fr' ? 'fr_FR' : 'en_US' },
   };
 }

@@ -91,6 +91,12 @@ export interface CaseStudySectionContent {
   results?: L10n[];
   /** Current development status, when the project is still in progress. */
   status?: L10n;
+  /** Measured performance work. Say where the numbers come from (e.g. synthetic data). */
+  performance?: L10n[];
+  /** Automated tests and CI, with counts checked against the repository. */
+  testing?: L10n[];
+  /** Security measures verified in the source — never a claim of invulnerability. */
+  security?: L10n[];
 }
 
 export interface Project {
