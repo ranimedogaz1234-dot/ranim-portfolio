@@ -119,7 +119,9 @@
     "empty": "Aucun projet dans cette catégorie pour le moment.",
     "carouselLabel": "Carrousel de projets",
     "slideOf": "Projet {current} sur {total}",
-    "notReviewed": "Brouillon — à vérifier avec le dépôt"
+    "notReviewed": "Brouillon — à vérifier avec le dépôt",
+    "liveDemo": "Démo en ligne",
+    "newTab": "(s’ouvre dans un nouvel onglet)"
   },
   "experience": {
     "index": "04 / Parcours",
@@ -180,9 +182,9 @@
     "pendingText": "Cette partie sera rédigée à partir du vrai projet une fois ses détails confirmés.",
     "pendingScreens": "Les vraies captures d’écran de l’application apparaîtront ici.",
     "pendingStack": "Technologies à confirmer.",
-    "repo": "Voir le dépôt GitHub",
+    "repo": "Voir sur GitHub",
     "repoPending": "Le lien du dépôt sera ajouté prochainement.",
-    "demo": "Démo en ligne",
+    "demo": "Voir le site en ligne",
     "draftNote": "Étude de cas en préparation — contenu à vérifier avec le dépôt.",
     "identityNote": "Identité visuelle provisoire",
     "enlarge": "Agrandir : {alt}",

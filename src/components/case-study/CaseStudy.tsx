@@ -131,8 +131,8 @@ export function CaseStudy({ project, locale }: { project: Project; locale: Local
                 </a>
               )}
               {project.demoUrl && (
-                <a className="cs-btn" href={project.demoUrl} target="_blank" rel="noreferrer">
-                  {t('demo')} <Icon name="arrowUpRight" size={16} />
+                <a className="cs-btn" href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                  {t('demo')} <Icon name="externalLink" size={16} /> <span className="sr-only">{ta('newTab')}</span>
                 </a>
               )}
               {stack.length > 0 && (

@@ -119,7 +119,9 @@
     "empty": "No project in this category yet.",
     "carouselLabel": "Projects carousel",
     "slideOf": "Project {current} of {total}",
-    "notReviewed": "Draft — check against the repository"
+    "notReviewed": "Draft — check against the repository",
+    "liveDemo": "Live Demo",
+    "newTab": "(opens in a new tab)"
   },
   "experience": {
     "index": "04 / Experience",
@@ -180,9 +182,9 @@
     "pendingText": "This part will be written from the real project once its details are confirmed.",
     "pendingScreens": "Real screenshots of the application will appear here.",
     "pendingStack": "Technologies to be confirmed.",
-    "repo": "View the GitHub repository",
+    "repo": "View on GitHub",
     "repoPending": "The repository link will be added soon.",
-    "demo": "Live demo",
+    "demo": "Visit Live Website",
     "draftNote": "Draft case study — content still to be checked against the repository.",
     "identityNote": "Provisional visual identity",
     "enlarge": "View larger: {alt}",

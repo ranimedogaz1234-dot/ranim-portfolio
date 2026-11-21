@@ -345,6 +345,19 @@ function CenterCard({ project, locale, t }: { project: Project; locale: Locale; 
             <Icon name="github" size={22} />
           </a>
         )}
+        {project.demoUrl && (
+          <a
+            href={project.demoUrl}
+            className="btn btn--outline btn--icon"
+            target="_blank"
+            rel="noopener noreferrer"
+            title={t('liveDemo')}
+            aria-label={`${t('liveDemo')} — ${project.title} ${t('newTab')}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Icon name="externalLink" size={22} />
+          </a>
+        )}
       </div>
     </article>
   );
