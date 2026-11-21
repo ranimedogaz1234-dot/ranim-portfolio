@@ -41,7 +41,7 @@ const projectList: Project[] = [
       fr: 'Une plateforme de business intelligence pour analyser les produits et les avis clients de Sephora.',
     },
     stack: ['nextjs', 'fastapi', 'python'],
-    repoUrl: null,
+    repoUrl: `${GITHUB}/sephora-business-insight1`,
     demoUrl: null,
     cover: null,
     gallery: [],
