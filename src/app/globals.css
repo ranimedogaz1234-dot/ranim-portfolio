@@ -2228,8 +2228,12 @@ body {
 }
 [data-theme='dark'] .tech-chip img[data-mono='true'],
 [data-theme='dark'] .tech-dot img[data-mono='true'],
-[data-theme='dark'] .cs-tech img[data-mono='true'] {
+.cs[data-scheme='dark'] .cs-tech img[data-mono='true'] {
   filter: invert(1) brightness(1.4);
+}
+/* light case-study pages keep one-colour logos dark, whatever the portfolio theme */
+.cs[data-scheme='light'] .tech-icon[data-mono='true'] {
+  filter: none;
 }
 .tech-dot {
   display: grid;
@@ -2908,6 +2912,31 @@ body {
   .cs-shots__item--mobile:nth-child(n + 2) {
     grid-column: span 6;
   }
+  /* phones and small tablets: a swipeable strip instead of a long column; the next screenshot peeks in */
+  .cs-shots:not(.cs-shots--pending) {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
+    padding-bottom: 0.9rem;
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--cs-accent) 45%, transparent) transparent;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cs-shots:not(.cs-shots--pending) > .cs-shots__item {
+    flex: 0 0 86%;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+  .cs-shots:not(.cs-shots--pending) > .cs-shots__item--mobile {
+    flex-basis: min(52%, 15rem);
+  }
+  .cs-shots:not(.cs-shots--pending) > .cs-shots__item:only-child {
+    flex-basis: 100%;
+  }
   .cs-shots--pending {
     grid-template-columns: 1fr;
   }
@@ -3064,6 +3093,7 @@ body {
 }
 .cs-lightbox__figure {
   margin: 0;
+  touch-action: pan-y;
 }
 .cs-lightbox__figure img {
   display: block;

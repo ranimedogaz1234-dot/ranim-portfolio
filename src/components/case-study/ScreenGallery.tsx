@@ -94,6 +94,8 @@ export function ScreenGallery({ shots, title, locale }: { shots: ProjectScreensh
 
   const current = open !== null ? shots[open] : undefined;
   const step = (dir: number) => setOpen((i) => (i === null ? i : (i + dir + shots.length) % shots.length));
+  // touch: a horizontal swipe in the viewer goes to the previous / next screenshot
+  const swipe = useRef<{ x: number; y: number } | null>(null);
 
   return (
     <>
@@ -133,7 +135,20 @@ export function ScreenGallery({ shots, title, locale }: { shots: ProjectScreensh
         onClick={(e) => e.target === dialogRef.current && dialogRef.current?.close()}
       >
         {current && (
-          <figure className="cs-lightbox__figure">
+          <figure
+            className="cs-lightbox__figure"
+            onPointerDown={(e) => {
+              if (e.pointerType !== 'mouse') swipe.current = { x: e.clientX, y: e.clientY };
+            }}
+            onPointerUp={(e) => {
+              const start = swipe.current;
+              swipe.current = null;
+              if (!start || shots.length < 2) return;
+              const dx = e.clientX - start.x;
+              if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(e.clientY - start.y)) step(dx < 0 ? 1 : -1);
+            }}
+            onPointerCancel={() => (swipe.current = null)}
+          >
             <Image src={current.src} width={current.width} height={current.height} alt={current.alt[locale]} sizes="92vw" />
             <figcaption>{current.alt[locale]}</figcaption>
           </figure>
