@@ -127,7 +127,7 @@ const projectList: Project[] = [
     },
     stack: ['react', 'typescript', 'firebase', 'tailwind', 'vite'],
     repoUrl: `${GITHUB}/MindMirror`,
-    demoUrl: null,
+    demoUrl: 'https://mindmirror-01.web.app',
     cover: shot('mindmirror', 'home', 1440, 900, 'MindMirror public homepage', 'Page d’accueil publique de MindMirror'),
     gallery: [
       shot('mindmirror', 'results', 1440, 900, 'Personality result with each letter explained', 'Résultat de personnalité avec chaque lettre expliquée'),
