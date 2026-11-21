@@ -39,7 +39,6 @@ const projectList: Project[] = [
     // commit: 199 backend tests passed (1 real-data test skipped without the private files), 166 frontend tests passed.
     // Screenshots are the repository's own docs/screenshots, taken on a synthetic dataset with the real schema.
     categories: ['data', 'web', 'ai'],
-    featured: true,
     tagline: {
       en: 'Full-stack business-intelligence platform for Sephora’s catalogue and 1.09 million customer reviews: seven analytics pages, from executive KPIs to AI sentiment.',
       fr: 'Plateforme full-stack de business intelligence pour le catalogue Sephora et 1,09 million d’avis clients : sept pages d’analyse, des indicateurs de direction au sentiment par IA.',
@@ -121,6 +120,7 @@ const projectList: Project[] = [
     title: 'MindMirror',
     // Verified against github.com/ranimedogaz1234-dot/MindMirror (README + docs/screenshots), Nov 2026.
     categories: ['web', 'mobile'],
+    featured: true,
     tagline: {
       en: 'A trilingual (EN / FR / AR) personality-type assessment with transparent, explainable scoring.',
       fr: 'Une évaluation trilingue (EN / FR / AR) du type de personnalité, au calcul transparent et expliqué.',
